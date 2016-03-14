@@ -1,7 +1,7 @@
 # GPG CHEATSHEET
 
 ---
-Compilied by **@sandbrier_** | GPG Fingerprint: 2082 4A33 3BEF FE49 2FCB  4739 57A7 464B FBE4 9BD1 | Credit to: [Madboa](https://www.madboa.com/geek/gpg-quickstart/), Riseup.net & [Scout3801](http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html) | Last Updated: **20160313** | Download .txt file:
+Last Updated: **20160313** | [**Download**](https://github.com/sandbrier/solid-umbrella/blob/master/GPGcheatsheet.md) via GitHub
 
 ---
 ## Import / Export
@@ -109,3 +109,10 @@ gpg --output foo.txt --decrypt foo.txt.gpg
 ```
 
 If you have multiple secret keys, it'll choose the correct one, or output an error if the correct one doesn't exist. You'll be prompted to enter your passphrase. Afterwards there will exist the file "mydata.tar", and the encrypted "original," mydata.tar.gpg.
+
+---
+Compilied by **@sandbrier_** 
+
+GPG Fingerprint: 2082 4A33 3BEF FE49 2FCB  4739 57A7 464B FBE4 9BD1
+
+Credits: [Madboa](https://www.madboa.com/geek/gpg-quickstart/), Riseup.net & [Scout3801](http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html)

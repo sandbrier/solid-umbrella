@@ -1,13 +1,15 @@
 # GPG CHEATSHEET
 
 ---
-Last Updated: **20160313** | [**Download**](https://github.com/sandbrier/solid-umbrella/blob/master/GPGcheatsheet.md) via GitHub
+Last Updated: **March 23, 2016** | [**Download**](https://github.com/sandbrier/solid-umbrella/blob/master/GPGcheatsheet.md) via GitHub
 
 ---
 ## Import / Export
 #### Import Public Key via specified keyserver
+Note that the :80 at the end of the server address specifies HTTP as the outbound port and will often resolve issues.
 ```sh
 gpg --keyserver keys.riseup.net --recv-key 0x4E0791268F7C67EABE88F1B03043E2B7139A768E
+gpg --keyserver sks-keyservers.net:80 --recv-key 0x4E0791268F7C67EABE88F1B03043E2B7139A768E
 ```
 
 #### Import a Public Key

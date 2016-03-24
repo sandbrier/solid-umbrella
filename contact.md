@@ -28,14 +28,14 @@ I have verified my accounts via [keybase.io/sandbrier](https://keybase.io/sandbr
 
 If you are new to GPG or IM OTR take a look at the [contact page](http://underthesaddle.wordpress.com/contact/ ) of my website and follow the links to setup guides.
 
-*end*
+*Note: Signature Verification of this text only works if you use the [raw](https://raw.githubusercontent.com/sandbrier/solid-umbrella/master/contact.md) text.*
 -----BEGIN PGP SIGNATURE-----
 
-iQEcBAEBCgAGBQJW82oYAAoJEFenRkv75JvRnkoIAJ7gSQqr0M9XMnKhqmMMj8Mg
-lA3fCRSoA6046p17S+B91gRpuNzeJGEFPyEMx+POY7B0p3uhCYzEyyqIK2Mooak+
-qDQsbwGI5I7s2oaw8IGE8b8eMizGL0aIt+z7YZ7gsmK4zZoOFmkP83KeSUHKur57
-WKSkuz0CxJiwKPSDnynp8e3iF38mYs1QHNIkQFL4fqmK4NQ4JpGdzXdXpUn/pNj3
-NxJrP95nTCiGCztOSLEVLJGheI2Xh6yIYZTEj2jSTkLjY5igxrJJLKGsjMQ9Va42
-jVb4t/5oVk3PhYtOTVtv3Llljxkb9VM/zp6WrwpKCA/NtV9WCzRVoIOt/aenvI4=
-=Ptuu
+iQEcBAEBCgAGBQJW821yAAoJEFenRkv75JvRJpMH/1Q6HGNxhdtGh1lc7e1y00RR
+HTF272Zlc5mjlbAKW7shmARY9loT7SRStKMO3jo1Ixtou7uAu7ch+KK8jJgCI/DL
+0U6uAw2Kx1/A2gvhy6z7UfV3cnoY38yl3yRpj22hTp47rW8Dv7BsECXqSfu5zvLm
+kE9XslZXCijcICpf3T9PhA6nLg7QKUpKVJa2bNm2auUI43l4rXmGrXsl+uFYUOfL
+pZZ7KCmfobfAWJQG5ZsRsz5oWOITdwkCWvy28zEkgKlc4/pISkrAaldvzYv3nAH4
+B8NH/+joa7RqJbpTEA7+xNJu0ik1LEwT6G1KJyQZ70pHYODMrJkItmFVI9I2Gm4=
+=yxvd
 -----END PGP SIGNATURE-----

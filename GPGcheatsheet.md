@@ -10,6 +10,8 @@ Note that the :80 at the end of the server address specifies HTTP as the outboun
 ```sh
 gpg --keyserver keys.riseup.net --recv-key 0x4E0791268F7C67EABE88F1B03043E2B7139A768E
 gpg --keyserver sks-keyservers.net:80 --recv-key 0x4E0791268F7C67EABE88F1B03043E2B7139A768E
+gpg ---keyserver x-hkp://pool.sks-keyservers.net --recv-keys 0x4E2C6E8793298290
+
 ```
 
 #### Import a Public Key
@@ -47,6 +49,14 @@ gpg --list-sigs 0x4E0791268F7C67EABE88F1B03043E2B7139A768E
 Notes: Put both the file and the signature file (.asc) in the same folder. You'll want to import the public key prior to running the verification.
 ```sh
 gpg --verify file.exe.asc file.exe
+gpg --verify file.exe.sig file.exe
+```
+Output should say "Good signature from..." & "Signature made DATE by KEYID", don't worry about the warning about the trusted signature. That is related to the trust level of the Key not the validity of the signature.
+
+#### Create a signed file (detached)
+This is best for signing a binary/executable file as it creates a new (detached) .sig signature file
+```sh
+gpg --detach-sign filename
 ```
 
 #### Change the passphrase of the secret key
@@ -113,8 +123,8 @@ gpg --output foo.txt --decrypt foo.txt.gpg
 If you have multiple secret keys, it'll choose the correct one, or output an error if the correct one doesn't exist. You'll be prompted to enter your passphrase. Afterwards there will exist the file "mydata.tar", and the encrypted "original," mydata.tar.gpg.
 
 ---
-Compilied by **@sandbrier_** 
+Compilied by **[@sandbrier_](https://twitter.com/sandbrier_)** 
 
 GPG Fingerprint: 2082 4A33 3BEF FE49 2FCB  4739 57A7 464B FBE4 9BD1
 
-Credits: [Madboa](https://www.madboa.com/geek/gpg-quickstart/), Riseup.net & [Scout3801](http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html)
+Credits: [Madboa](https://www.madboa.com/geek/gpg-quickstart/), [GnuPG Mini Howto](http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html), Riseup.net,  & [Scout3801](http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html)

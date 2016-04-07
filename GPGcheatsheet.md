@@ -1,9 +1,18 @@
-# GPG CHEATSHEET
+# THE GPG CHEATSHEET
 
 ---
-Last Updated: **March 23, 2016** | [**Download**](https://github.com/sandbrier/solid-umbrella/blob/master/GPGcheatsheet.md) via GitHub
+Last Updated: **April 7, 2016**
 
 ---
+### Suggestions for getting the most out of Command Line
+1. **Key IDs** - The majority of these commands require you to specifiy the key to act upon. That is done via a KEY ID. The Key ID is *usually* expressed by name, long ID, or short ID.They are interchangeable. For example all 3 of the following would work in a command.
+    * sandbrier@openmailbox.org
+    * 0xF962DCC50EFD680E
+    * 0x0EFD680E
+2. **Filenames** - Key management can become challenging if you don't have a good standard for filenames. This is the format that works for me: email_pubkey_KEYID.xyz and email_PRIVKEY_KEYID.xyz. For example my pubkey file is named sandbrier_pubkey_MASTER_0xF962DCC50EFD680E.key.
+    * Consider using CAPS to distinguish PRIVKEYS from pubkeys
+    * Consider putting PRIVKEYs and Revocation keys in a subfolder
+
 ## Import / Export
 #### Import Public Key via specified keyserver
 Note that the :80 at the end of the server address specifies HTTP as the outbound port and will often resolve issues.
@@ -20,15 +29,31 @@ gpg --import public.key
 ```
 This adds the public key in the file "public.key" to your public key ring.
 
-#### Export a key to text file
+#### Export/Backup Public Key
 ```sh
 gpg --armor --export alice@cyb.org
+gpg --armor --export 0xF962DCC50EFD680E > filename.key
+gpg --armor --export 0xF962DCC50EFD680E > filename.gpg
+gpg --armor --export 0xF962DCC50EFD680E > filename.txt
 ```
 
-#### Export a private key:
+#### Export/Backup PRIVATE key:
 ```sh
-gpg --export-secret-key -a "User Name" > private.key
+gpg --armor --export-secret-key 0xF962DCC50EFD680E  > filename.key
+gpg --armor --export-secret-key 0xF962DCC50EFD680E  > filename.gpg
+gpg --armor --export-secret-key 0xF962DCC50EFD680E  > filename.txt
 ```
+
+#### Export/Backup PRIVATE SUBkey(s):
+```sh
+gpg --export-secret-subkeys 0xF962DCC50EFD680E > filename.key
+```
+
+#### Export Trust values:
+```sh
+gpg --export-ownertrust > filename.txt
+```
+
 ## Fingerprints
 #### See Key Fingerprint
 ```sh
@@ -97,6 +122,34 @@ gpg --list-keys
 ```sh
 gpg --list-secret-keys
 ```
+## REVOCATION
+4 steps to revoking your GPG key and publishing the revocation.
+1. **Create a Revocation Key**
+```sh
+ gpg --gen-revoke KEYID
+```
+2. **Copy Revocation Key**
+You’re asked if you want to provide a reason for the revocation (key comprised, superseded or no longer used) and an optional free-text description. After supplying your passphrase, an ascii-armoured key block is printed out. Paste this text into a file
+```sh
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+Comment: A revocation certificate should follow
+
+iGwEIBECACwFAkAKbmwlHQJLZXkgd2FzIG9uIGEgbGFwdG9wIHRoYXQgd2FzIHN0
+b2xlbgAKCRBQw2pwY4IoXlv4AJ0XgWhSuSwv2jpd2ifFA5IXyijnEACfXfn/qtfq
+KyMdShD0odXAliKD43w=
+=mRL+
+-----END PGP PUBLIC KEY BLOCK-----
+```
+3. **Locally import Revocation key**
+```sh
+gpg --import my_revocation.txt
+```
+4. **Upload Revocation Key**
+```sh
+gpg --keyserver pgp.mit.edu --send-keys 6382285E
+```
+
 ## ENCRYPT / DECRYPT
 #### To encrypt data, use:
 Simple version
@@ -125,6 +178,6 @@ If you have multiple secret keys, it'll choose the correct one, or output an err
 ---
 Compilied by **[@sandbrier_](https://twitter.com/sandbrier_)** 
 
-GPG Fingerprint: 2082 4A33 3BEF FE49 2FCB  4739 57A7 464B FBE4 9BD1
+GPG Fingerprint: 3AC9 97AF 897E E5F2 ABF7  2644 F962 DCC5 0EFD 680E
 
-Credits: [Madboa](https://www.madboa.com/geek/gpg-quickstart/), [GnuPG Mini Howto](http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html), Riseup.net,  & [Scout3801](http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html)
+Credits: [Madboa](https://www.madboa.com/geek/gpg-quickstart/), [GnuPG Mini Howto](http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto.html), Riseup.net, [chrisroos](https://gist.github.com/chrisroos/1205934), [Alex Cabal](https://alexcabal.com/creating-the-perfect-gpg-keypair/), [Matt Biddulph](https://www.hackdiary.com/2004/01/18/revoking-a-gpg-key/) & [Scout3801](http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html)

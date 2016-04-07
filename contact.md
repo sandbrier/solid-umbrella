@@ -14,9 +14,11 @@ OTR Fingerprint: 71E88A22 AEFC77E3 22CF05E2 1C313CC4 5B78CC1D
 ### EMAIL
 sandbrier@openmailbox.org
 
-GPG Key ID: 0x57A7464BFBE49BD1
+*Note: This is a new key as of April 7, 2016. The previous 2048 key is replaced by this 4096 key*
 
-GPG Fingerprint:2082 4A33 3BEF FE49 2FCB 4739 57A7 464B FBE4 9BD1
+GPG Key ID: 0xF962DCC50EFD680E
+
+GPG Fingerprint:3AC9 97AF 897E E5F2 ABF7  2644 F962 DCC5 0EFD 680E
 
 [GPG Key Block](https://github.com/sandbrier/solid-umbrella/blob/master/sandbrier_pubkey.txt)
 
@@ -31,11 +33,17 @@ If you are new to GPG or IM OTR take a look at the [contact page](http://underth
 *Note: Signature Verification of this text only works if you use the [raw](https://raw.githubusercontent.com/sandbrier/solid-umbrella/master/contact.md) text.*
 -----BEGIN PGP SIGNATURE-----
 
-iQEcBAEBCgAGBQJW821yAAoJEFenRkv75JvRJpMH/1Q6HGNxhdtGh1lc7e1y00RR
-HTF272Zlc5mjlbAKW7shmARY9loT7SRStKMO3jo1Ixtou7uAu7ch+KK8jJgCI/DL
-0U6uAw2Kx1/A2gvhy6z7UfV3cnoY38yl3yRpj22hTp47rW8Dv7BsECXqSfu5zvLm
-kE9XslZXCijcICpf3T9PhA6nLg7QKUpKVJa2bNm2auUI43l4rXmGrXsl+uFYUOfL
-pZZ7KCmfobfAWJQG5ZsRsz5oWOITdwkCWvy28zEkgKlc4/pISkrAaldvzYv3nAH4
-B8NH/+joa7RqJbpTEA7+xNJu0ik1LEwT6G1KJyQZ70pHYODMrJkItmFVI9I2Gm4=
-=yxvd
+iQIcBAEBCgAGBQJXBes7AAoJEDlmqr3k5JdDDuEP/3E6KBF2h7QIIXFCDWplN0i1
+auZu3qnnhW8puXIFBYjae+MM30u+4a7yzxRiXTYp22qUK90HQqxkISn3/2vjTfMJ
+TY5x+JhlrrlYNRwKqI/IAAeUtyvDLZmbvUt3Pe+rcxJg/rYTjkm8kp1a1U3GsZe1
+kYoJhxxKz1AsziPih3G93vNWCzjyTJJb2EK1f313QmU2zVdMwWh2zdCHXPVlQPif
+HFZHryV2K/MTFDYjDkAiGMeBW+LUhL3JfVVbQsLH6MNlsWTmhkSFhNK7SEobCY3w
+3ZToaNL4Pfv0VHVVzl+REHtkJ8XJgNdUCH4bPeCw6srX9NjMSYYl1ESUfmAMeJfL
+6ET1uhFv2gIsrfKDiUpMjncGC/Y0jjq0VcJCgFzBcP5Aw9qD8bnN0YLZZTZQKkK7
+1QuZXKMqctxehpKfMn7EpZk7GAsaLk7ukYAP2zumQbzczF2Lt9JXNdlFrqzEyHbA
+K6JQ2SeG61A3df39iewWX5chlw73A6BszCHX+UY+coMQl/VcKy8PGrhw+4zGApRo
+EzLcLHuDknWsaUBnooJALsLKlyyoErRKklvpKxaAMp33SDpScq1xjmcNgbhiIVd6
+Lc7BYG6Eh7d8wYhVBim5T55e9tFOBcI3bqf2pGPH7iiDWFEQhJvkB41GE6bKvNLA
+mE02wO5BQst6gQGpq282
+=A1CQ
 -----END PGP SIGNATURE-----
